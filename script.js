@@ -6,11 +6,13 @@ tolitres = document.getElementById("to-litres");
 toGallons = document.getElementById("to-gallons");
 toPounds = document.getElementById("to-pounds");
 toKilograms = document.getElementById("to-kilograms");
+btnEl = document.querySelector('button')
+convertFrom = document.getElementsByClassName("fro");
+
 
 inputNumEl.addEventListener("input", (event) => {
   if (inputNumEl.value) {
     // update source elements as you type
-    convertFrom = document.getElementsByClassName("fro");
     for (let i = 0; i < convertFrom.length; i++) {
       convertFrom[i].textContent = event.target.value;
     }
@@ -37,3 +39,17 @@ inputNumEl.addEventListener("input", (event) => {
     );
   }
 });
+
+btnEl.addEventListener('click', ()=>{
+    inputNumEl.value = '0'
+    toFeet.textContent = '0'
+    toMeters.textContent = '0'
+    tolitres.textContent = '0'
+    toGallons.textContent = '0'
+    toKilograms.textContent = '0'
+    toPounds.textContent = '0'
+    for (let i = 0; i < convertFrom.length; i++) {
+        convertFrom[i].textContent = '0'
+    }
+    
+})
