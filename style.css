@@ -18,6 +18,7 @@ body {
   padding: 40px 0 80px 0;
   border-radius: 50px;
   background-color: rgb(193, 208, 203);
+  max-height: 745px;
 }
 
 #input-num {
