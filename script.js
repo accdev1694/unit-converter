@@ -1,14 +1,12 @@
-inputNumEl = document.getElementById("input-num");
-document.getElementById("from-meters");
-toFeet = document.getElementById("to-feet");
-toMeters = document.getElementById("to-meters");
-tolitres = document.getElementById("to-litres");
-toGallons = document.getElementById("to-gallons");
-toPounds = document.getElementById("to-pounds");
-toKilograms = document.getElementById("to-kilograms");
-btnEl = document.querySelector('button')
-convertFrom = document.getElementsByClassName("fro");
-
+const inputNumEl = document.getElementById("input-num");
+const toFeet = document.getElementById("to-feet");
+const toMeters = document.getElementById("to-meters");
+const tolitres = document.getElementById("to-litres");
+const toGallons = document.getElementById("to-gallons");
+const toPounds = document.getElementById("to-pounds");
+const toKilograms = document.getElementById("to-kilograms");
+const btnEl = document.querySelector("button");
+const convertFrom = document.getElementsByClassName("fro");
 
 inputNumEl.addEventListener("input", (event) => {
   if (inputNumEl.value) {
@@ -40,16 +38,15 @@ inputNumEl.addEventListener("input", (event) => {
   }
 });
 
-btnEl.addEventListener('click', ()=>{
-    inputNumEl.value = '0'
-    toFeet.textContent = '0'
-    toMeters.textContent = '0'
-    tolitres.textContent = '0'
-    toGallons.textContent = '0'
-    toKilograms.textContent = '0'
-    toPounds.textContent = '0'
-    for (let i = 0; i < convertFrom.length; i++) {
-        convertFrom[i].textContent = '0'
-    }
-    
-})
+btnEl.addEventListener("click", () => {
+  inputNumEl.value = "0";
+  toFeet.textContent = "0";
+  toMeters.textContent = "0";
+  tolitres.textContent = "0";
+  toGallons.textContent = "0";
+  toKilograms.textContent = "0";
+  toPounds.textContent = "0";
+  for (let i = 0; i < convertFrom.length; i++) {
+    convertFrom[i].textContent = "0";
+  }
+});
